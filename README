@@ -1,0 +1,58 @@
+  _______         __    __          ___ ___  __                     
+ |   _   |.-----.|  |_ |__| ______ |   Y   ||__|.----..--.--..-----.
+ |.  1   ||     ||   _||  ||______||.  |   ||  ||   _||  |  ||__ --|
+ |.  _   ||__|__||____||__|        |.  |   ||__||__|  |_____||_____|
+ |:  |   |                         |:  1   |                        
+ |::.|:. |                          \:.. ./                         
+ `--- ---'                           `---'                          
+ 
+  ___ ___                       __                
+ |   Y   |.-----..-----..-----.|  |_ .-----..----.
+ |.      ||  _  ||     ||__ --||   _||  -__||   _|
+ |. \_/  ||_____||__|__||_____||____||_____||__|  
+ |:  |   |                                        
+ |::.|:. |                                        
+ `--- ---'   v0.2
+--------------------------------------------------------------------------------
+(c) 2011,2012, fG! <reverser@put.as>
+http://reverse.put.as
+
+Introduction
+------------
+This is a kernel module for Mac OS X Intel x86 that will search and patch
+anti-virus drivers on the fly and disable realtime file-scanning.
+Everything is dynamic except the module name hashes.
+
+It only supports 32bits kernels. 64bits is just a matter of adding missing code.
+
+Have fun.
+fG!
+
+Installation
+------------
+Just load and unload as a normal kernel module.
+
+Tested with
+-----------
+Snow Leopard 10.6.8 and Lion 10.7.3, 32 bits only!
+
+Known Problems
+--------------
+The code that searches the callback works for all but one AV (handled individually)
+but can be easily broken with changes. So it could be more robust, for example
+by porting a disassembler library to kernel land.
+Or we could just pass the required information from userland. That wouldn't
+be so much fun and feels hackish!
+The kernel modules names should be stable else we have problems because we
+are trying to match their hashes.
+
+Source
+------
+Created with XCode 4.x
+
+TODO LIST
+---------
+
+References
+----------
+None

@@ -1,0 +1,6 @@
+CHANGELOG
+---------
+
+v0.1 - dirty PoC to test if AV kernel modules can be patched on the fly
+v0.2 - automatic search & seek for known AV modules and patch them on the fly
+       tested with Snow Leopard and Lion, 32 bits
